@@ -20,4 +20,4 @@ services:
 
 networks:
   net:
-    name: net
+    driver: bridge
