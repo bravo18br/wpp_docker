@@ -3,7 +3,7 @@ services:
     image: wppconnect/server-cli:main
     container_name: wppconnect
     networks:
-      - net
+      - monitora_sites_net
     restart: always
     ports:
       - "8075:21465"
@@ -19,5 +19,6 @@ services:
     command: wppserver -c /usr/src/wpp-server/config.json
 
 networks:
-  net:
+  monitora_sites_net:
     driver: bridge
+    external: true
